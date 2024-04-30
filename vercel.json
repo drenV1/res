@@ -1,5 +1,11 @@
 {
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/"}
-    ]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/admin/(.*)", "dest": "/src/admin/$1" },
+    { "src": "/client/(.*)", "dest": "/src/client/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
 }
